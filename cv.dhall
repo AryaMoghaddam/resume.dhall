@@ -27,7 +27,7 @@ let workExperience =
           , end =
               resume.EndDate.Date { year = 2022, month = resume.Month.April }
           }
-        , skills = [ "REST API", "Jira", "Data Retention]
+        , skills = [ "REST API", "Jira", "Data Retention"]
         , bulletPoints =
           [ "Utilized YAML and JSON code following OpenAPI concepts to finalize and publish External/3rd party payment product with the goal of bringing Auto Deposit product to 60% transaction volume from 52%"
           , "Wrote API documentation on Interac e-transfer, Pay by Bank and Digital ID products focusing on Sub-Collections and Data Retention to enable external developers use Interac’s APIs "
@@ -46,134 +46,26 @@ let workExperience =
           }
         , skills = [ "Docker", "Git" ]
         , bulletPoints = 
-          [ "Developed and maintained large Haskell code base responsible for automated firmware documentation, code, and signal generation"
-          , "Improved Haskell products' performance and runtimes by over 20% by identifying laziness-related space leaks and rewriting hot code paths"
-          , "Responsible for design and implementation of firmware verification infrastructure employed by entire organization"
-          , "Designed and developed robust firmware signal inspection architecture with Java and modern statically typed Python"
+          [ "Utilized Docker to run server-based applications, to minimize infrastructure delay and manage team operationsn"
+          , "Developed a test automation framework to ensure all components of the project are stable"
+          , "Embedded a standardized SSH Dev and SYS Integration procedure and toolkit for each sub team"
           ]
         }
-      , Tesla2 = resume.Job::{
-        , company = "Tesla"
-        , title = resume.sweIntern "Firmware Tooling"
-        , location = "Remote"
-        , dates =
-          { start = { year = 2021, month = resume.Month.May }
-          , end =
-              resume.EndDate.Date { year = 2021, month = resume.Month.August }
-          }
-        , skills = [ "Haskell", "Firmware", "C" ]
-        , bulletPoints =
-          [ "Continued development work on Haskell firmware tooling code base"
-          , "Implemented network scheduler for custom Cybertruck communications protocols in Haskell using novel functional techniques"
-          , "Designed and implemented C API code generation tools for embedded real-time vehicle transmissions in the Cybertruck"
-          ]
-        }
-      , Tesla = resume.Job::{
-        , company = "Tesla"
-        , title = resume.sweIntern "Firmware Tooling"
-        , location = "Palo Alto, California"
-        , dates =
-          { start = { year = 2020, month = resume.Month.January }
-          , end =
-              resume.EndDate.Date { year = 2020, month = resume.Month.August }
-          }
-        , skills = [ "Haskell", "Python", "Java" ]
-        , bulletPoints =
-          [ "Developed and maintained large Haskell code base responsible for automated firmware documentation, code, and signal generation"
-          , "Improved Haskell products' performance and runtimes by over 20% by identifying laziness-related space leaks and rewriting hot code paths"
-          , "Responsible for design and implementation of firmware verification infrastructure employed by entire organization"
-          , "Designed and developed robust firmware signal inspection architecture with Java and modern statically typed Python"
-          ]
-        }
-      , `University of Waterloo` = resume.Job::{
-        , company = "University of Waterloo"
-        , title = "Teaching Assistant (Algebra)"
-        , location = "Waterloo, Ontario"
-        , dates =
-          { start = { year = 2019, month = resume.Month.September }
-          , end =
-              resume.EndDate.Date { year = 2019, month = resume.Month.December }
-          }
-        , skills = [ "Pure Math", "Teaching" ]
-        , bulletPoints =
-          [ "Tutored classes of over 1000 students in number theory and abstract algebra"
-          , "Prepared individual tutoring lesson plans to ameliorate understanding in advanced topics such as quadratic reciprocity or interactive theorem proving"
-          ]
-        }
-      , Ericsson = resume.Job::{
-        , title = resume.sweIntern "Performance"
-        , location = "Kanata, Ontario"
-        , company = "Ericsson"
-        , dates =
-          { start = { year = 2019, month = resume.Month.May }
-          , end =
-              resume.EndDate.Date { year = 2019, month = resume.Month.August }
-          }
-        , skills = [ "Clojure", "Python" ]
-        , bulletPoints =
-          [ "Developed pure functional Clojure metrics infrastructure to monitor complex JVM architectures, allowing for discovery of multiple performance issues"
-          , "Implemented a parser and interpreter for an internally designed performance-testing DSL"
-          ]
-        }
-      , CENX = resume.Job::{
-        , company = "CENX"
-        , title = resume.sweIntern "Test Automation"
-        , location = "Ottawa, Ontario"
-        , dates =
-          { start = { year = 2017, month = resume.Month.July }
-          , end =
-              resume.EndDate.Date
-                { year = 2017, month = resume.Month.September }
-          }
-        , skills = [ "Python", "Systems" ]
-        , bulletPoints =
-          [ "Developed robust automated Python framework for load-testing web apps"
-          , "Created custom implementation of IETF RFC socket protocols to debug non-standard network stacks"
-          , "Discovered and provided patches for multiple security issues, including cryptography weaknesses, via automated fuzzing"
-          ]
-        }
-      , `inBay Technologies` = resume.Job::{
-        , company = "inBay Technologies"
-        , title = resume.sweIntern "Full Stack"
-        , location = "Kanata, Ontario"
-        , dates =
-          { start = { year = 2016, month = resume.Month.July }
-          , end =
-              resume.EndDate.Date { year = 2016, month = resume.Month.August }
-          }
-        , skills = [ "Ruby", "Rails", "Javascript" ]
-        , bulletPoints =
-          [ "Created internal use development tools backed by Ruby on Rails and Javascript to monitor and debug specialized production systems"
-          ]
-        }
-      }
-
+ 
 let chronological_jobs
     : List resume.Job.Type
-    = [ workExperience.`Jane Street`
-      , workExperience.Tesla2
-      , workExperience.`TQ Tezos`
-      , workExperience.Tesla
-      , workExperience.`University of Waterloo`
-      , workExperience.Ericsson
-      , workExperience.CENX
-      , workExperience.`inBay Technologies`
+    = [ workExperience.`Interac`
+      , workExperience.`Watolink`
+ 
       ]
 
-let summary
-    : List Text
-    = [ "Professional experience in functional programming (Haskell, Clojure)"
-      , "Competent core development skills (Python, Java, Ruby, Javascript)"
-      , "Avid user and contributor of free, libre, and open source software"
-      , "Strong background in mathematics"
-      ]
 
 let projects =
       { board-to-latex = resume.Project::{
-        , author = "s-zeng"
+        , author = "AryaMoghaddam"
         , title = "board-to-latex"
-        , skills = [ "Flask", "OCR", "Latex" ]
-        , blurb = "Turn pictures of math into latex"
+        , skills = [ "Python", "Jupyter Notebook", "Latex" ]
+        , blurb = "Favorite music genre predictor"
         }
       , rag-shenanigann = resume.Project::{
         , author = "s-zeng"
@@ -312,11 +204,16 @@ let miscExperience =
       }
 
 let coursework
-    : List Text
-    = [ "Functional Programming (Haskell, Scala, Scheme)"
-      , "OOP Programming (C++)"
-      , "Formal Logic and Interactive Theorem Proving (Coq)"
-      , "Compilers and Interpreters"
+    : List resume.Education.Type
+    = [ resume.Education::{
+        , Institude = "Deep Learning AI"
+        , Certificate = "Deep Learning Specialization"
+      ,"Neural Networks and Deep Learning"
+      , "Improving Deep Neural Networks: Hyperparameter Tuning"
+      , "Regularization and Optimization"
+      , "Structuring Machine Learning Projects"
+      , "Convolutional Neural Networks"
+      , "Sequence Models"
       ]
 
 let education
@@ -324,10 +221,10 @@ let education
     = [ resume.Education::{
         , school = "University of Waterloo"
         , degree = "Bachelor's degree"
-        , major = "Computer Science"
+        , major = "Systems Design Engineering"
         , gradDate = resume.ResumeDate::{
           , month = resume.Month.May
-          , year = 2022
+          , year = 2026
           }
         }
       ]
@@ -338,8 +235,8 @@ in  { info
     , projects
     , contribs
     , miscExperience
-    , coursework
     , education
+    , coursework
     , socials
     , chronological_jobs
     }
