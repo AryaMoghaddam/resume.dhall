@@ -3,48 +3,54 @@ let makeResume = ./dhallResume.dhall
 let resume = makeResume.helpers
 
 let socials =
-      { github = resume.socialHelpers.github::{ userName = "s-zeng" }
-      , linkedin = resume.socialHelpers.linkedin::{ userName = "s-zeng1" }
+      { github = resume.socialHelpers.github::{ userName = "AryaMoghaddam" }
+      , linkedin = resume.socialHelpers.linkedin::{ userName = "aryajm" }
       }
 
 let info =
       resume.PersonalInfo::{
-      , name = "Simon Zeng"
-      , title = "Software Engineer"
-      , email = "contact@simonzeng.com"
-      , phone = "1 (613) 983-9079"
-      , site = "simonzeng.com"
+      , name = "Arya Moghaddam"
+      , title = "Software Engineer, Product Manager"
+      , email = "ajavadim@uwaterloo.ca"
+      , phone = "1 (647) 994-2125"
+      , site = "https://aryamo.webflow.io/"
       , socials = toMap socials
       }
 
 let workExperience =
-      { `TQ Tezos` = resume.Job::{
-        , company = "TQ Tezos"
-        , title = resume.sweIntern "Blockchain"
-        , location = "New York, New York"
-        , dates =
-          { start = { year = 2020, month = resume.Month.September }
-          , end =
-              resume.EndDate.Date { year = 2020, month = resume.Month.December }
-          }
-        , skills = [ "Blockchain", "Haskell" ]
-        , bulletPoints =
-          [ "Authored Tezos smart contracts in a Haskell EDSL to automate proprietary applications for permissioned blockchains"
-          , "Converted fragmented Python-based Tezos Kubernetes deployment script to idiomatic Dhall, greatly improving readability and maintainability"
-          , "Constructed peer-to-peer staking topology monitoring and visualization infrastructure with Python"
-          ]
-        }
-      , `Jane Street` = resume.Job::{
-        , company = "Jane Street"
-        , title = "Software Engineering Intern"
-        , location = "New York, New York"
+      { `Interac` = resume.Job::{
+        , company = "Interac"
+        , title = resume.sweIntern "API Product Manager"
+        , location = "Toronto, Ontario"
         , dates =
           { start = { year = 2022, month = resume.Month.January }
           , end =
               resume.EndDate.Date { year = 2022, month = resume.Month.April }
           }
-        , skills = [ "OCaml", "Quantitative" ]
-        , bulletPoints = [] : List Text
+        , skills = [ "REST API", "Jira", "Data Retention]
+        , bulletPoints =
+          [ "Utilized YAML and JSON code following OpenAPI concepts to finalize and publish External/3rd party payment product with the goal of bringing Auto Deposit product to 60% transaction volume from 52%"
+          , "Wrote API documentation on Interac e-transfer, Pay by Bank and Digital ID products focusing on Sub-Collections and Data Retention to enable external developers use Interac’s APIs "
+          , "Developed Minimum Marketable Features (MMF) Auto Deposit, Auto Reclaim and Fraud APIs to avoid inefficient distribution of resources and decrease time to market"
+          , "Created Jira Roadmaps, User Stories, Epics and Spikes on Pay by Bank and e-transfer projects"
+          ]
+        }
+      , `Watolink` = resume.Job::{
+        , company = "Watolink"
+        , title = "Infrastructure Core Member"
+        , location = "Waterloo, Ontario"
+        , dates =
+          { start = { year = 2021, month = resume.Month.October }
+          , end =
+              resume.EndDate.Date { year = 2022, month = resume.Month.January }
+          }
+        , skills = [ "Docker", "Git" ]
+        , bulletPoints = 
+          [ "Developed and maintained large Haskell code base responsible for automated firmware documentation, code, and signal generation"
+          , "Improved Haskell products' performance and runtimes by over 20% by identifying laziness-related space leaks and rewriting hot code paths"
+          , "Responsible for design and implementation of firmware verification infrastructure employed by entire organization"
+          , "Designed and developed robust firmware signal inspection architecture with Java and modern statically typed Python"
+          ]
         }
       , Tesla2 = resume.Job::{
         , company = "Tesla"
